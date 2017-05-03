@@ -1,4 +1,5 @@
 const sharp = require('sharp');
+const getColors = require('get-image-colors');
 const { toBase64, toFile } = require('./outputs');
 const promiseAllMap = require('./utils/promiseAllMap');
 
@@ -73,6 +74,15 @@ const processImage = function (loaderContext, path, options) {
         })
         .then((data) => toBase64(loaderContext, options, data));
       }
+
+			if (options.color) {
+				output.color = new Promise((resolve, reject) => {
+					getColors(path).then((colors) => {
+						console.log(colors[0].hex());
+						resolve(colors[0].hex());
+					});
+				});
+			}
 
       return promiseAllMap(output);
     });

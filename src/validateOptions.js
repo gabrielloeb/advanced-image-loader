@@ -15,6 +15,7 @@ const errorDefinitions = {
   '.format': 'option "format" must be a supported format ["jpeg", "png", "tiff" or "webp"]',
   '.name': 'option "name" must be either a non empty string or a function',
   '.placeholder': 'option "placeholder" must be a integer between 1 and 160',
+	'.color': 'option "color" must be a boolean',
   '.quality': 'option "quality" must be a integer between 1 and 100',
   '.srcset': 'option "srcset" must be an array of valid widths [positive integer or "original" string]',
   '.width': 'option "width" must be a valid width [positive integer or "original" string]',

@@ -40,6 +40,9 @@
       "maximum": 160,
       "type": "number"
     },
+		"color": {
+			"type": "boolean"
+		},
     "quality": {
       "minimum": 1,
       "maximum": 100,

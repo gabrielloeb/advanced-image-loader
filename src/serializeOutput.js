@@ -38,6 +38,10 @@ const serializeOutput = function (data) {
     output.placeholder = data.placeholder;
   }
 
+	if (data.color) {
+		output.color = `"${data.color}"`;
+	}
+
   output.images = [data.main].concat(data.srcset || [])
     .filter((value, index, array) => array.indexOf(value) === index)
     .sort((imageA, imageB) => imageA.width - imageB.width);

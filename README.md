@@ -137,7 +137,7 @@ module.exports = {
           srcset: [320, 640, 960, 1280, 1920],
           quality: 90,
           placeholder: 32,
-					color: true
+          color: true
         }
       }
     ]

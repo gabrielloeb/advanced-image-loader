@@ -88,6 +88,7 @@ In case a configuration parameter is defined in both location the resourceQuery 
 - `format: string`: define the output format of the images (valid values are `jpeg`, `png`, `tiff`, `webp`) `default: 'jpeg'`
 - `quality: integer`: define the compression quality (ignored if format is `png`) `default: '95'`
 - `placeholder: integer`: if specified define the width of the image used as placeholder and inlined as data URI
+- `color: boolean`: if true include the dominant color of the image
 - `name: function or string`: define the naming of the output files `default: '[name]-[width]@[quality]'`
   - if a string is provided it will be interpolated and the following values will be replaced
     * `[width]` the width of the output image
@@ -135,7 +136,8 @@ module.exports = {
           width: 1280,
           srcset: [320, 640, 960, 1280, 1920],
           quality: 90,
-          placeholder: 32
+          placeholder: 32,
+					color: true
         }
       }
     ]

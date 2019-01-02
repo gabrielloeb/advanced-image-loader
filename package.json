@@ -52,7 +52,7 @@
     "ajv-keywords": "^1.5.1",
     "get-image-colors": "^1.8.1",
     "loader-utils": "^1.1.0",
-    "sharp": "^0.17.2"
+    "sharp": "^0.20.1"
   },
   "nyc": {
     "lines": 100,
